@@ -1,8 +1,8 @@
 class Palimpsest < Formula
   desc "Local, self-contained AI-assisted book translation tool"
   homepage "https://github.com/eevlice/Palimpsest"
-  url "https://github.com/eevlice/Palimpsest/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "6413a916191e99d4242248833661e146ac51c69512918638d567a02ec3420853"
+  url "https://github.com/eevlice/Palimpsest/archive/refs/tags/v1.1.0.tar.gz"
+  sha256 "7c805697d7795507ad90d7caaa703325b375f321692f29543961d31d8b751adc"
   # no license field - the repo has no LICENSE file yet, so nothing to
   # declare truthfully. Add one (and this line) if that changes.
 
@@ -50,6 +50,6 @@ class Palimpsest < Formula
 
   test do
     system libexec/"venv/bin/python3", "-c",
-           "import flask, anthropic, openai, google.genai, docx, cryptography"
+           "import flask, anthropic, openai, google.genai, docx, cryptography, pypdfium2, pdfminer"
   end
 end
